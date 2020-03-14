@@ -1,0 +1,88 @@
+<div class="container text-center">
+    <div class="container text-center my-3"> 
+        <div id="demo" class="carousel slide" data-ride="carousel">
+            <ul class="carousel-indicators">
+              <li data-target="#demo" data-slide-to="0" class="active"></li>
+              <li data-target="#demo" data-slide-to="1"></li>
+              <li data-target="#demo" data-slide-to="2"></li>
+              <li data-target="#demo" data-slide-to="3"></li>
+            </ul>
+            <div class="carousel-inner img">
+              <div class="carousel-item active">
+                <img src="https://uspto.report/TM/88771419/mark.png"  width="600" height="200">
+              </div>
+              <div class="carousel-item">
+                <img src="https://s3b.cashify.in/gpro/uploads/2019/09/16135517/buyback_offer_banner.png"  width="600" height="200">   
+              </div>
+              <div class="carousel-item">
+                <img src="https://static.toiimg.com/photo/msid-71372686/71372686.jpg"  width="600" height="200"> 
+              </div>
+              <div class="carousel-item">
+                <img src="https://rukminim1.flixcart.com/merch/960/960/images/1473147870787.jpg"  width="600" height="200">
+              </div>
+              <div class="carousel-item">
+                <img src="https://www.couponcandy.in/wp-content/uploads/2015/11/Amazon-Diwali-Sale-Offer.png"  width="600" height="200">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+          </div>
+       
+    </div> 
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 col-lg-4 my-2" *ngFor="let item of allItems">
+                    <div class="card">
+                        
+                        <div class="card-body bg-light">
+                            <div class="row">
+                                <div class="col-6">
+                                    <h6 class="card-title"><b> {{ item.itemName }}</b></h6>
+                                </div>
+                                <div class="col-6">
+                                    <p class="text-right font-weight-bolder">Price: {{ item.itemPrice }}</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <p class="card-text"> {{ item.itemRemarks }}</p>
+                                </div>
+                                <div class="col-6 text-center ">
+                                    <div class="row ">
+                                        <div class="col-12 align-right my-2">
+                                            <p class="card-text"> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                              
+                                <div class="media-container">
+                                    <img class="card-img" [src]="item.itemImage" width="70px" height="250px"
+                                     [alt]="item.itemUrl">
+                                     <div class="row">
+                                         <div class="col-8 align-right mt-3">
+                                                <button type="button" class="btn btn-dark "
+                                                (click)="displayItemDetails(item.itemId)">
+                                                <i class="material-icons align-bottom">description</i> ViewDetails </button>
+                                         </div>
+                                         <div class="col-4 align-left mt-3">
+                                             <button type="button" class="btn btn-warning " (click)="addToCart(item)">
+                                            <i class="material-icons align-bottom">shopping_cart</i>Add </button>
+                                        </div>
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
